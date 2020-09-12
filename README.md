@@ -1,6 +1,6 @@
-Vue-App using Public APIs - [Public API](#https://api.publicapis.org/)
+Vue-App using Public APIs - [Public API](# https://api.publicapis.org/)
 
-[DEMO Link](#https://vue-app-public-apis.web.app/#/)
+[DEMO Link](# https://vue-app-public-apis.web.app/#/)
 
 
 
