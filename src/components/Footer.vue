@@ -31,6 +31,7 @@
         <ul>
           <li>List of Categories</li>
           <li>Select any Category</li>
+          <li>New Category page</li>
         </ul>
       </div>
       <div class="col">
@@ -71,8 +72,9 @@
   width: 100%;
   position: relative;
   height: auto;
-  background-color: #070617;
-  padding-top: 30px;
+  background-color: var(--color-footer);
+  padding-top: 40px;
+  margin-top: 30px;
 }
 .footer .col {
   width: 210px;
@@ -89,7 +91,7 @@
   font-family: inherit;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--color-grey-dark-1);
   font-weight: normal;
   text-transform: uppercase;
   font-size: 25px;
@@ -101,7 +103,7 @@
   padding: 0;
 }
 .footer .col ul li {
-  color: #999999;
+  color: var(--color-grey-light-4);
 
   font-family: inherit;
   font-weight: bold;
@@ -114,7 +116,7 @@
 }
 
 .footer .col ul li:hover {
-  color: #ffffff;
+  color: var(--color-grey-light-2);
   transition: 0.1s;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
@@ -142,7 +144,7 @@
   justify-content: center;
 }
 .footer .col-mid ul li a {
-  color: #999999;
+  color: var(--color-grey-light-4);
 
   font-family: inherit;
   font-weight: bold;
@@ -154,16 +156,16 @@
   font-size: 20px;
 }
 .footer .col-mid ul li .icon {
-  text-shadow: 1px 1px 1px #ccc;
   font-size: 1.5em;
 }
 
 .footer .col-mid ul li a:hover {
-  color: #ffffff;
+  color: var(--color-grey-light-2);
   transition: 0.1s;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
+/*for large Desktop */
 @media only screen and (min-width: 1280px) {
   .contain {
     width: 1200px;

@@ -1,0 +1,47 @@
+/* font style */
+
+h1.heading-primary {
+    font-size: 70px;
+    color: var(--color-grey-light-2);
+    font-weight: 700;
+  }
+    p.heading-paragraph {
+    color: var(--color-grey-light-2);
+    font-size: 40px;
+  }
+  
+  /* font size changes as screen size changed */
+  @media (max-width: 900px) {
+     h1.heading-primary {
+  
+      font-size: 60px;
+    }
+      p.heading-paragraph{
+      color: var(--color-grey-light-2);
+      font-size: 35px;
+    }
+  }
+  @media (max-width: 576px) {
+    h1.heading-primary {
+      font-size: 40px;
+    }
+     p.heading-paragraph {
+      color: var(--color-grey-light-2);
+      font-size: 25px;
+    }
+  }
+  
+  /* style for h3 caption for releavant cards */
+
+.h3-heading {
+    color: var(--color-primary-light);
+    font-size: 30px;
+    margin: 4px auto;
+  }
+
+  /* underlined heading */
+  .list--title-underline {
+    padding: 65px 0 25px;
+    padding-bottom: 5px;
+    border-bottom: var(--line);
+  }

@@ -1,0 +1,56 @@
+/* styles for cards  */
+
+/* small card style */
+.card-home{
+    color: var(--color-primary);
+    font-size: 20px;
+    border:var(--line);
+    /* display: grid; */
+    border-radius: 5px;
+    -webkit-box-shadow: var(--shadow-light);
+    -moz-box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-light);
+  
+  }
+  .card-home .card-title{
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--color-primary-dark);
+  }
+  .card-home .card-title:hover {
+    text-decoration: none;
+    transform: scale(1.1)!important;
+  }
+  .card-content {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-primary-light);
+  }
+
+
+  /* big card styling */
+
+  .big-card .card {
+    border: 0;
+    line-height: 22px;
+    margin: 4px auto;
+  }
+  .big-card .card-body .card-text {
+    font-size: 20px;
+    color: var(--color-grey-dark-1);
+  }
+  .title p.card-text {
+    font-size: 30px !important;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--color-primary-dark) !important;
+  }
+  /* style for link  */
+  .big-card .link-open .card-text {
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .link-open .card-text:hover {
+    transform: scale(1.1);
+  }

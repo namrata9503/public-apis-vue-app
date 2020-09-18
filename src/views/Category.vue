@@ -1,10 +1,10 @@
 <template>
-  <div class="cat">
+  <div>
     <div class="category-img">
       <!-- fade down animate css for heading of page  -->
       <transition enter-active-class="animate__animated animate__fadeInDown">
         <div v-if="show">
-          <h1 class="list--title">{{this.category}} Category</h1>
+          <h1 class="list--title-underline heading-primary">{{this.category}} Category</h1>
         </div>
       </transition>
     </div>
@@ -13,20 +13,20 @@
     <div class="container-fluid m-auto category">
       <div class="row m-auto">
         <div
-          v-for="category in catn"
+          v-for="category in selectedCategory"
           v-bind:key="category.Link"
-          class="card info mx-2 mb-3 col-xs-12 col-sm-3"
+          class="card card-body card-home mx-2 mb-3 col-sm-3"
         >
-          <div class="card-bodyy">
+          <div class>
             <!-- select any category from list to see details in detail page -->
-            <h5 class="card-title">
+            <h5>
               <router-link
                 class="card-title"
                 :to="{ name: 'Detailpage', 
-                       params: { id: category.API, category: category.Category, https: category.HTTPS }}"
+                       params: { id: category.API, category: category.Category }}"
               >{{category.API}}</router-link>
             </h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{category.Description}}</h6>
+            <h6 class="card-content mb-2 text-muted">{{category.Description}}</h6>
           </div>
         </div>
       </div>
@@ -35,41 +35,32 @@
 </template>
 
 <script>
-import axios from "axios";
+import { apiFetcher } from "../shared/js/apiFetcher";
 export default {
   name: "Category",
+  mixins: [apiFetcher],
   props: {
     category: String
   },
 
   data() {
     return {
-      catn: [],
       show: false
     };
   },
   created: function() {
-    // fetch data with parameter as category name
-    axios
-      .get(process.env.VUE_APP_ENV_API + "/entries", {
-        params: {
-          category: this.category
-        }
-      })
-      .then(res => {
-        this.show = true;
-        this.catn = res.data.entries;
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    //get subcategories from main category
+    this.getSelectedCategory(this.category);
   }
 };
 </script>
 
 <style>
 .category {
-  padding: 80px;
+  padding: 60px;
+}
+.category .card-home {
+  max-width: 250px;
 }
 </style>
 

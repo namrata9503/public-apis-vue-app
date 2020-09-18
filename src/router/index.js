@@ -3,11 +3,11 @@ import Vue from 'vue'
 import App from '../App.vue';
 import VueRouter from 'vue-router';
 
-import Homepage from '../UI/Homepage';
-import Detailpage from '../UI/Detailpage';
-import Randomizer from '../UI/Randomizer';
-import Categories from '../UI/Categories';
-import Category from "../UI/Category";
+import Homepage from '../views/Homepage';
+import Detailpage from '../views/Detailpage';
+import Randomizer from '../views/Randomizer';
+import Categories from '../views/Categories';
+import Category from "../views/Category";
 
 Vue.use(VueRouter);
 

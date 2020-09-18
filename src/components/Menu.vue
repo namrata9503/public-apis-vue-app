@@ -79,16 +79,18 @@ export default {
 <style>
 nav {
   font-size: 20px;
+  font-weight: 900;
 }
 
-/* toggler icon color */
+/* toggler icon color which enables in small screen*/
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+/* for small screen navbar */
 @media (min-width: 234px) {
   .navbar-collapse {
-    background-color: rgba(131, 91, 5, 0.925);
-    color: #fff;
+    background-color: var(--color-primary-dark);
+    color: var(--color-grey-light-4);
   }
   nav.navbar-expand-sm {
     padding: 0;
@@ -107,23 +109,20 @@ nav {
 }
 /* after scrolling navigation color changes */
 .change_color {
-  background-color: rgba(131, 91, 5, 0.925);
+  background-color: var(--color-primary-dark);
 }
 
-img {
+.navbar-brand img {
   width: 40px;
   height: 40px;
 }
-a {
-  color: #fff;
-}
-.nav-link {
+
+a.nav-link {
   transition: all 0.2s ease;
+  color: var(--color-grey-light-4);
 }
 .nav-link:hover {
-  color: #fff !important;
-  font-weight: 900;
-  transform: scale(1.1);
+  color: var(--color-grey-light-2) !important;
 }
 </style>
 
